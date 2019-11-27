@@ -1,8 +1,8 @@
 # 创建消费者
 
-##消费在上一章生产的一条消息:
+## 消费在上一章生产的一条消息:
 ![average](./queue.png)
-##代码
+## 代码
 ```java
 package com.example.rabbit.chapter2;
 
