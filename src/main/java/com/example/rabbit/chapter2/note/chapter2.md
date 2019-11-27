@@ -66,14 +66,19 @@ public class RabbitConsumer {
 每发送一个消息tag就自动+1
 ![](./tag.png)
 
+# 注意点:
 ```     
         TimeUnit.SECONDS.sleep(5);
         channel.close();
         connection.close();
 ```
-#注意点:
+
 在关闭通道和前阻塞5秒是因为通道和连接关闭要在Consumer ack 应答后关闭,否则将无法完成应答
 下图为应答处理中检查通道是否处于开启状态
+
+
+
+
 ![](./transmit.png)
 ![](./transmit2.png)
 ![](./transmit3.png)
