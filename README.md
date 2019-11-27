@@ -4,3 +4,6 @@ RabbitMQ 学习笔记
 <a href="https://github.com/vitalists/rabbit/blob/master/src/main/java/com/example/rabbit/chapter1/note/chapter1.md" title="标题">第一章:初识生产者生产消息</a>
 
 <a href="https://github.com/vitalists/rabbit/blob/master/src/main/java/com/example/rabbit/chapter2/note/chapter2.md" title="标题">第二章:初识消费者消费消息</a>
+***
+哈哈~~~ 终于写完了简单例子,从此会有RabbitMQ了可以在简历上写下浓重的一笔:会用RabbitMQ.
+
