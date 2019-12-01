@@ -30,6 +30,7 @@ public class RabbitConsumer {
                 }
                 System.out.println(envelope.getDeliveryTag());
                 channel.basicAck(envelope.getDeliveryTag(), false);
+                
             }
         };
         // 将消费者绑定到队列中去,设置接收到消息的回调对象,如果收到消息将调用consumer中的方法

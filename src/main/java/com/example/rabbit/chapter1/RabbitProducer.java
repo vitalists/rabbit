@@ -39,9 +39,11 @@ public class RabbitProducer {
         System.out.println("AMQP.Queue.BindOk:"+declareOk1.toString());
         String message = "chapter1 demo!";
         // 发送消息: 需要发送到交换机的哪个队列中去都是通过之前定义的routingKey 匹配的
-        channel.basicPublish("chapter1Exchange", "chapter1", MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes());
+        channel.basicPublish("chapter1Exchange", "chapter12415",true, MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes());
+
+
         // 关闭资源
-        channel.close();
-        connection.close();
+//        channel.close();
+//        connection.close();
     }
 }
