@@ -8,7 +8,7 @@
       Broker内部生产的 inner-msg-id 全局唯一 （1）全局唯一（2）MQ生成，具备业务无关性，对消息发送方和消息接收方屏蔽
 `  
   具体可浏览网页: <a href='https://cloud.tencent.com/developer/article/1048675'>消息总线真的能保证幂等</a>
-## RoutingKey BindingKey 关系:
+### RoutingKey BindingKey 关系:
 `
  交换器和队列时通过BindKey绑定. 根据不同的路由规则生产者发布消息时通过routingKey 和路由模式找到相应的队列存储消息.
  direct模式下BindingKey和RoutingKey 必须完全相同才可以被queue接收(这种模式下RoutingKey就是BindingKey).
@@ -34,7 +34,7 @@
   页面中鼠标放在AE上可以看到绑定的备用交换机名称:
   ![](./1.png)
  ### 与channel.basicPublish方法中的mandatory参数作用相同。
-    - mandatory = true 表示交换机没有路由到queue时将消息返回给消息生产者
+    - mandatory = true 表示交换机没有路由到queue时将消息返回给消息生产者。
     - mandatory = false 表示交换机没有路由到queue时消息会直接丢弃。
     - 如果同时实用 alternate-exchange参数和mandatory参数则alternate-exchange参数会覆盖mandatory参数。
  #### mandatory 参数的实用方式 :
