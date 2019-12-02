@@ -38,7 +38,7 @@ public class RabbitProducer3 {
 
         //向正常交换机发送消息,发送一个交换机没有的路由.消息就会转到备用的队列中去
         String message = "chapter1 demo!";
-        // 交换机没找到对应的队列就会转发到备份交换机中
+        // 闯入一个 不存在的RoutingKey
         channel.basicPublish("normalExchange", "chapter12415",true, MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes());
 
         channel.close();
