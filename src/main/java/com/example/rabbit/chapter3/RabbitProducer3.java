@@ -38,8 +38,16 @@ public class RabbitProducer3 {
 
         //向正常交换机发送消息,发送一个交换机没有的路由.消息就会转到备用的队列中去
         String message = "chapter1 demo!";
-        // 闯入一个 不存在的RoutingKey
-        channel.basicPublish("normalExchange", "chapter12415",true, MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes());
+        // 传入一个无法路由到queue的RoutingKey
+        channel.basicPublish("normalExchange", "chapter12415",true,true, MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes());
+        channel.addReturnListener(new ReturnListener() {
+            @Override
+            public void handleReturn(int replyCode, String replyText, String exchange, String routingKey, AMQP.BasicProperties properties, byte[] body) throws IOException {
+                String msg = new String(body);
+                System.out.println("收到的消息" + msg);
+            }
+        });
+
 
         channel.close();
         connection.close();

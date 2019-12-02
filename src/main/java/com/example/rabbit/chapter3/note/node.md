@@ -33,6 +33,12 @@
   `
   页面中鼠标放在AE上可以看到绑定的备用交换机名称:
   ![](./1.png)
- ### 不要与channel.basicPublish方法中的mandatory 参数重复设置.  mandatory 参数为 true 时表示 用代码监听未被路由到的消息.同时使用时 此参数无效
-
+ ### 与channel.basicPublish方法中的mandatory参数作用相同。
+    - mandatory = true 表示交换机没有路由到queue时将消息返回给消息生产者
+    - mandatory = false 表示交换机没有路由到queue时消息会直接丢弃。
+    - 如果同时实用 alternate-exchange参数和mandatory参数则alternate-exchange参数会覆盖mandatory参数。
+ #### mandatory 参数的实用方式 :
+ ![](./mandatory.png)
+ #### 要添加 Listener监听未被路由到的消息。
+ ![](./addReturnListener.png)
     
