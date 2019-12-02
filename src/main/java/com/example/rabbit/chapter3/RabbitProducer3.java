@@ -1,4 +1,4 @@
-package com.example.rabbit.chapter3.note;
+package com.example.rabbit.chapter3;
 
 import com.rabbitmq.client.*;
 
