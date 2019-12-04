@@ -3,5 +3,5 @@
 <a href="https://github.com/vitalists/rabbit/blob/master/src/main/java/com/example/rabbit/chapter1/note/chapter1.md" title="标题">第一章:初识生产者生产消息</a>
 
 <a href="https://github.com/vitalists/rabbit/blob/master/src/main/java/com/example/rabbit/chapter2/note/chapter2.md" title="标题">第二章:初识消费者消费消息</a>
-     
+
 <a href="https://github.com/vitalists/rabbit/blob/master/src/main/java/com/example/rabbit/chapter3/note/chapter3.md">第三章:浅谈交换机</a>
