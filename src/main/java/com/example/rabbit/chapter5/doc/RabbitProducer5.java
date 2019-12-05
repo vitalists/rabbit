@@ -41,6 +41,7 @@ public class RabbitProducer5 {
             public void handleAck(long deliveryTag, boolean multiple) throws IOException {
                 System.out.println("deliveryTag" + deliveryTag + ",multiple:" + multiple);
             }
+
             // 消息丢失
             @Override
             public void handleNack(long deliveryTag, boolean multiple) throws IOException {
