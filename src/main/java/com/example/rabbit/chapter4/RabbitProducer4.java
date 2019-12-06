@@ -35,5 +35,5 @@ public class RabbitProducer4 {
         channel.basicPublish("chapter4Exchange", "chapter4",true,properties, message.getBytes());
         channel.close();
         connection.close();
-    }
+    } 
 }
